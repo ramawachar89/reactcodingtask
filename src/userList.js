@@ -1,95 +1,3 @@
-// import React, { useState, useEffect } from "react";
-
-// export default function UserList() {
-//   const [users, setUsers] = useState([]);
-// console.log(users)
-//   useEffect(() => {
-//     fetch("http://localhost:3000/getAllUser", {
-//       method: "GET"
-//  })
-//       .then((response) => response.json())
-//       .then((data) => setUsers(data));
-//   }, []);
-
-//   return (
-//     <>
-//       <p>UserList</p>
-//       <ul>
-//         {users.map((user) => (
-//           <li key={user._id}>
-//             <span>{user.name}</span>
-//             <span>{user.email}</span>
-//           </li>
-//         ))}
-//       </ul>
-//     </>
-//   );
-// }
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
-
-// export default function UserList() {
-//   const [users, setUsers] = useState([]);
-
-//   useEffect(() => {
-//     async function fetchData() {
-//       try {
-//         const response = await axios.get("http://localhost:3000/getAllUser");
-//         if (response.data.status === "ok") {
-//           setUsers(response.data.data);
-//         }
-//       } catch (error) {
-//         console.error(error);
-//       }
-//     }
-//     fetchData();
-//   }, []);
-
-//   return (
-//     <div>
-//       {users.map((user) => (
-//         <div key={user._id}>
-//           <h2>{user.name}</h2>
-//           <p>{user.email}</p>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
-// import { Link } from "react-router-dom";
-
-// export default function UserList() {
-//   const [users, setUsers] = useState([]);
-
-//   useEffect(() => {
-//     async function fetchData() {
-//       try {
-//         const response = await axios.get("http://localhost:3000/getAllUser");
-//         if (response.data.status === "ok") {
-//           setUsers(response.data.data);
-//         }
-//       } catch (error) {
-//         console.error(error);
-//       }
-//     }
-//     fetchData();
-//   }, []);
-
-//   return (
-//     <div>
-//       <Link to="/">GoBack</Link>
-//       {users.map((user) => (
-//         <div key={user._id}>
-//           <h2>{user.name}</h2>
-//           <p>{user.email}</p>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
 
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
@@ -106,13 +14,13 @@ export default function UserList() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("http://localhost:3000/getAllUser");
+        const response = await axios.get("http://localhost:3001/getAllUser");
         if (response.data.status === "ok") {
           setUsers(response.data.data);
-  
+
           $(document).ready(function () {
             $('#myTable').DataTable();
-        });
+          });
           // if (dataTableRef.current) {
           //   $(dataTableRef.current).DataTable({
           //     searching: true,
@@ -162,8 +70,8 @@ export default function UserList() {
               <td>{user.religion}</td>
               <td>{user.maritalStatus}</td>
               <td>{user.bloodGroup}</td>
-              <td>{user.state}<br/>{user.country}<br/>{user.pincode}</td>
-              
+              <td>{user.state}<br />{user.country}<br />{user.pincode}</td>
+
             </tr>
           ))}
         </tbody>
@@ -172,5 +80,5 @@ export default function UserList() {
   );
 }
 
- 
- 
+
+
