@@ -1,0 +1,93 @@
+<Link to="/userlist">GoList</Link>
+      
+        <input type="text" {...register("name")} placeholder="Name" />
+        {errors.name && <p>{errors.name.message}</p>}
+
+        <input type="text" {...register("email")} placeholder="Email" />
+        {errors.email && <p>{errors.email.message}</p>}
+
+        <input
+          type="text"
+          {...register("guardianName")}
+          placeholder="Guardian Name"
+        />
+        {errors.guardianName && <p>{errors.guardianName.message}</p>}
+
+        <input type="text" {...register("mobile")} placeholder="Mobile" />
+        {errors.mobile && <p>{errors.mobile.message}</p>}
+
+        <input type="text" {...register("address")} placeholder="Address" />
+        {errors.address && <p>{errors.address.message}</p>}
+
+        <input type="text" {...register("country")} placeholder="Country" />
+        {errors.country && <p>{errors.country.message}</p>}
+
+        <input
+          type="text"
+          {...register("occupation")}
+          placeholder="Occupation"
+        />
+        {errors.occupation && <p>{errors.occupation.message}</p>}
+
+        <input
+          type="text"
+          {...register("nationality")}
+          placeholder="Nationality"
+        />
+        {errors.nationality && <p>{errors.nationality.message}</p>}
+
+        <input type="date" {...register("dob")} placeholder="Date of Birth" />
+        {errors.dob && <p>{errors.dob.message}</p>}
+
+        <input type="text" {...register("g")} placeholder="Sex" />
+        {errors.sex && <p>{errors.sex.message}</p>}
+
+        <input
+          type="text"
+          {...register("govId")}
+          placeholder="Government ID"
+          />
+          {errors.govId && <p>{errors.govId.message}</p>}
+      
+          <input
+            type="text"
+            {...register("emergencyContact")}
+            placeholder="Emergency Contact"
+          />
+          {errors.emergencyContact && (
+            <p>{errors.emergencyContact.message}</p>
+          )}
+      
+          <input type="text" {...register("state")} placeholder="State" />
+          {errors.state && <p>{errors.state.message}</p>}
+      
+          <input type="text" {...register("city")} placeholder="City" />
+          {errors.city && <p>{errors.city.message}</p>}
+      
+          <input type="text" {...register("pincode")} placeholder="Pincode" />
+          {errors.pincode && <p>{errors.pincode.message}</p>}
+      
+          <input type="text" {...register("religion")} placeholder="Religion" />
+          {errors.religion && <p>{errors.religion.message}</p>}
+      
+          <input
+            type="text"
+            {...register("maritalStatus")}
+            placeholder="Marital Status"
+          />
+          {errors.maritalStatus && <p>{errors.maritalStatus.message}</p>}
+      
+          <input
+            type="text"
+            {...register("bloodGroup")}
+            placeholder="Blood Group"
+          />
+          {errors.bloodGroup && <p>{errors.bloodGroup.message}</p>}
+      
+          <button type="submit" onClick={handleSubmit(onSubmit)}>Submit</button>
+          <select {...register("gender")} >
+            <option className={style.gen} value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="transgender">Transgender</option>
+          </select><br/>

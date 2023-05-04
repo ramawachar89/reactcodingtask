@@ -1,0 +1,9 @@
+.button{
+    border-radius: 5px;
+    width: 14rem;
+    height: 2rem;
+    background: linear-gradient(to bottom, #ccffff 0%, #ffffff 100%);
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+}
